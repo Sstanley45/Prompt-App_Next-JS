@@ -10,6 +10,7 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+
   //callbacks to actually connect to the Database
   callbacks: {
     async session({ session }) {
@@ -21,7 +22,7 @@ const handler = NextAuth({
     },
 
     async signIn({ profile }) {
-      console.log("This is the profile: ", profile);
+      // console.log("This is the profile: ", profile); 
       try {
         await connectDB();
         //check if user already exists

@@ -27,3 +27,6 @@ pnpm dev
 bun dev
 
 ```
+
+## vercel link for the deployed app. 
+.....
