@@ -3,13 +3,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const { data: session } = useSession();
-  const pathName = usePathname(); //return the current path
-  const router = useRouter();
+  // console.log('post>>>', post.creator.username); 
+  
+  const pathName = usePathname(); //return the current path 
+  
 
   const [copied, setCopied] = useState("");
 

@@ -17,7 +17,7 @@ const handler = NextAuth({
       const sessionUser = await User.findOne({ email: session.user.email });
       //update session id.
       session.user.id = sessionUser._id.toString();
-      //we are updating it to make sure we always know which user is cureently online.
+      //we are updating it to make sure we always know which user is currently online.
       return session;
     },
 

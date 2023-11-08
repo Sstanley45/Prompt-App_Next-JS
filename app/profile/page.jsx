@@ -16,12 +16,12 @@ const MyProfile = () => {
       const response = await fetch(`/api/users/${session?.user.id}/posts`);
       const data = await response.json();
       setMyPosts(data);
-      console.log(data);
+      console.log(data); 
     };
     // console.log(data);
     if (session?.user.id) {
       fetchPosts();
-      console.log("fetched myposts");
+      // console.log("fetched myposts");
     }
   }, [session?.user.id]);
 
